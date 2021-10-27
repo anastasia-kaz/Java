@@ -1,3 +1,5 @@
+package com.lesson;
+
 public class Les3 {
     public static void main(String[] args){
         //функции пишут с большой буквы

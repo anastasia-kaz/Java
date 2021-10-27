@@ -1,3 +1,5 @@
+package com.lesson;
+
 public class Les6 {
     public static void printString(String a, String b){
         System.out.print(a);
