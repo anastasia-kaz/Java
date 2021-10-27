@@ -1,3 +1,5 @@
+package com.lesson;
+
 public class Les7 {
     public static int getMax(int[] arr){
         if (arr == null || arr.length == 0){

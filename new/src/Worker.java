@@ -1,25 +1,19 @@
-public class Worker {
-    Person person;
-    Worker(String name, int age, char gender){
-        person = new Person(name, age, gender);
-        this.salary = salary;
-    };
+public class Worker extends Employee {
 
-    int salary;
-    boolean isAdult(){
-        if (person.age >= 18){
-            return true;
-        } else {
-            return false;
-        }
+
+
+    Worker(String name, int age, char gender, int BaseSalary) {
+        super(name, age, gender, BaseSalary);
     }
 
-    double getTax() {
-        return salary * 0.1;
+    public int getSalary() {
+        return BaseSalary;
     }
 
-    void printWorker(){
-        System.out.println("name: " + person.name + ", gender: " + person.gender + ", age: " + person.age + ", salary: " + salary);
-
+    public String getName(){
+        return name;
     }
+
+
 }
+

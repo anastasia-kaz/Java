@@ -1,21 +1,43 @@
-public class Employee {
-    String name;
-    int age;
-    char gender;
-    int salary;
+public class Employee extends Person {
+
+    protected int BaseSalary;
+    protected int salary;
 
     Employee(String name, int age, char gender, int salary){
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+        super(name, age, gender);
         this.salary = salary;
     }
 
-    public  void   isSameName(Employee employee){
+    public int getBaseSalary() {
+
+        return BaseSalary;
+    }
+
+    public void setBaseSalary(int baseSalary) {
+
+        BaseSalary = baseSalary;
+    }
+
+    public int getSalary() {
+
+        return salary;
+    }
+
+    public void getName(String name) {
+
+        this.name = name;
+    }
+
+    public void setName(String name) {
+
+        this.name = name;
+    }
+
+    boolean   isSameName(Employee employee){
         if (name.equals(employee.name)) {
-            System.out.println("true");
+            return true;
         } else {
-            System.out.println("false");
+            return false;
         }
     };
 

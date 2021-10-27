@@ -1,3 +1,5 @@
+package com.lesson;
+
 public class Les4 {
     public static void main(String[] args){
         // int i = 0;

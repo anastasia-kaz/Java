@@ -1,3 +1,7 @@
+package com;
+
+import com.lesson.Les8;
+
 public class testLes8 {
     public static boolean testGetSum(){
         if (Les8.getSum(10, 10) != 20){
