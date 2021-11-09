@@ -1,4 +1,4 @@
-public class Manager extends Employee {
+public final class Manager extends BaseEmployee {
     private int subemploye;
 
     public Manager(String name, int age, char gender, int daySalary, int subemploye) {
@@ -15,7 +15,7 @@ public class Manager extends Employee {
     }
 
     @Override
-    public int getSalary(MonthUtils.Month[] monthArray) {
+    public int getSalary(MonthUtils.IMonth[] monthArray) {
         int Salary = super.getSalary(monthArray) + ((subemploye *  super.getSalary(monthArray)) / 100);
         return Salary;
     }

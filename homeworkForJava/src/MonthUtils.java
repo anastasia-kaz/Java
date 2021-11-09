@@ -1,12 +1,19 @@
 public class MonthUtils {
 
-    public static class Month{
+    public interface IMonth{
+        String getName();
+        int getDay();
+        int getWorkDay();
+
+    }
+
+    public static final class MonthImpl implements IMonth{
 
         private String name;
         private int day;
         private int workDay;
 
-        public Month(String name, int day, int workDay) {
+        public MonthImpl(String name, int day, int workDay) {
             this.name = name;
             this.day = day;
             this.workDay = workDay;
@@ -15,42 +22,31 @@ public class MonthUtils {
             return name;
         }
 
-        public void setName(String name) {
-            this.name = name;
-        }
-
         public int getDay() {
             return day;
-        }
-
-        public void setDay(int day) {
-            this.day = day;
         }
 
         public int getWorkDay() {
             return workDay;
         }
 
-        public void setWorkDay(int workDay) {
-            this.workDay = workDay;
-        }
 
     }
 
 
-    public static final Month[] MONTHS = new Month[] {
-            new Month("Январь", 31, 19),
-            new Month("Февраль", 28, 20),
-            new Month("Март", 31, 22),
-            new Month("Апрель", 30, 22),
-            new Month("Май", 31, 20),
-            new Month("Июнь", 30, 22),
-            new Month("Июль", 31, 22),
-            new Month("Август", 31, 22),
-            new Month("Сентябрь", 30, 22),
-            new Month("Октябрь", 31, 21),
-            new Month("Ноябрь", 30, 22),
-            new Month("Декабрь", 31, 23),
+    public static final IMonth[] MONTHS = new MonthImpl[] {
+            new MonthImpl("Январь", 31, 19),
+            new MonthImpl("Февраль", 28, 20),
+            new MonthImpl("Март", 31, 22),
+            new MonthImpl("Апрель", 30, 22),
+            new MonthImpl("Май", 31, 20),
+            new MonthImpl("Июнь", 30, 22),
+            new MonthImpl("Июль", 31, 22),
+            new MonthImpl("Август", 31, 22),
+            new MonthImpl("Сентябрь", 30, 22),
+            new MonthImpl("Октябрь", 31, 21),
+            new MonthImpl("Ноябрь", 30, 22),
+            new MonthImpl("Декабрь", 31, 23),
     };
 
 }

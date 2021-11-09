@@ -14,6 +14,9 @@ public class Worker extends Employee {
         return name;
     }
 
-
+    @Override
+    public final int getBaseSalary() {
+        return super.getBaseSalary();
+    }
 }
 
